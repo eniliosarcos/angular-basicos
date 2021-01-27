@@ -1,0 +1,24 @@
+<h3>Agregar </h3>
+<hr>
+
+<form (ngSubmit)="agregar()">
+    <!-- llaves cuadradas es para establecer propiedades al objeto  [value]="nuevo.nombre" -->
+    <!-- parentesis es para escuchar un evento (input)="cambiarNombre($event)" -->
+    <!-- [(ngModel)]= "nuevo.nombre" two way data biding: es decir, tanto emite como recibe eventos o propiedades  -->
+    <input 
+        type="text" 
+        placeholder="Nombre"
+        [(ngModel)]= "nuevo.nombre"
+        name="nombre"
+    />
+    <input 
+        type="number" 
+        placeholder="Poder"
+        [(ngModel)]= "nuevo.poder"
+        name="poder"
+    />
+
+    <button type="submit">
+        Agregar
+    </button>
+</form>
